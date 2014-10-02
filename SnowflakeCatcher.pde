@@ -1,7 +1,7 @@
 snowFlake [] flakes;
 void setup()
 {
-  frameRate(200);
+  frameRate(30);
   flakes = new snowFlake[75];
   size(600, 620);
   background(0);
