@@ -1,16 +1,16 @@
 snowFlake [] flakes;
 void setup()
 {
-  frameRate(30);
-  flakes = new snowFlake[75];
+  frameRate(100);
+  flakes = new snowFlake[100];
   size(600, 620);
   background(0);
   fill(0);
   rect(-50,-50,1000,1000);
   for (int i=0; i< flakes.length; i++)
   {
-  int cordX= (int)(Math.random()*600);
-  int cordY= (int)(Math.random()*500);
+  int cordX= 6*i;
+  int cordY= (int)(Math.random()*600);
   flakes [i]=new snowFlake(cordX, cordY);
   }
 }
@@ -28,9 +28,11 @@ void draw()
   }
   if (mousePressed==true)
   {
+    noStroke();
   fill(50, 100, 145);
-  ellipse(mouseX, mouseY, 10, 10);
+  rect(mouseX, mouseY, 10, 10);
   }
+  
 }
 
 class snowFlake
